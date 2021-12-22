@@ -4,7 +4,13 @@ services:
     annotations:
       dev.okteto.com/auto-ingress: "private"
     build: .
-    shm_size: '1gb'
+      context: .
+      shm_size: '1GB'
+    shm_size: '1GB'
+    ulimits:
+     nproc: 65535
+    cap_add:
+     - ALL
     ports:
       - 8080
       - 8181
