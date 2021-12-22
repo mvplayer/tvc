@@ -4,6 +4,7 @@ services:
     annotations:
       dev.okteto.com/auto-ingress: "private"
     build: .
+    shm_size: '1gb'
     ports:
       - 8080
       - 8181
